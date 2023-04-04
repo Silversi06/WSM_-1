@@ -1,3 +1,19 @@
 body{
     background-color: beige;
 }
+/* h1의 자매이니 모든 h2에 plum 배경색
+    첫번째 자매니까h3은 적용된다 */
+h1 ~ h2{
+    /* background-color: plum; */
+}
+/* h1의 자매 중 첫 번째h2만 plum배경색 
+  첫번째 자매니까h3은 적용안됨 !!시험에 꼭나옴!!*/
+h1+h2{
+    background-color: plum;
+}
+
+/* h1과 h2는 plum배경색 */
+h1,
+h2{
+    background-color: plum;
+}
