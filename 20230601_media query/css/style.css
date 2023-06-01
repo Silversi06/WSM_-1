@@ -1,0 +1,21 @@
+/* desktop */
+body{
+    background-color: crimson;
+}
+
+/* tablet */
+@media screen and (max-width:720px){ 
+    /* 720일 때 까지만 720일 때는 파랑색*/
+    /*최대 너비가 720px 일 때, 적용 즉, 720px 보다 작을 때 적용*/
+    body{
+        background-color: dodgerblue;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:540px){
+    /*최대 너비가 540px 일 때, 적용 즉, 540px 보다 작을 때 적용*/
+    body{
+        background-color: deeppink;
+    }
+}
