@@ -1,0 +1,111 @@
+/* Variable CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;400;700&display=swap');
+:root {
+    --first-color:#008156;
+    --second-color:#efb11c;
+    --body-color:#fff;
+
+    /* font */
+    --body-font: 'Hamhlet', serif;
+    --h1-font-size:2rem;
+    --h2-font-size:1.5rem;
+    --h3-font-size:1.25rem;
+    --normal-font-size:1rem;
+    --small-font-size:0.8rem;
+    --smaller-font-size:0.6rem;
+    --font-thin:200;
+    --font-regular:400;
+    --font-bold:700;
+
+}
+
+body{
+    font-family: var(--body-font);  /*Hamhlet 폰트*/
+    font-size:var(--normal-font-size);
+    color: #000;
+}
+header{
+    background-color: var(--first-color);
+    position: fixed;    /*스크롤해도 항상 위치 고정하자*/
+    top:0;
+    right:0;    /*오른쪽 끝까지 늘리기*/
+    left:0;     /*왼쪽 끝까지 늘리기*/
+}
+nav{
+    height:44px;
+}
+.nav.container{
+    display:flex;   /*기본값: 수평정렬*/
+    justify-content: space-between;
+    align-items:center; /*교차축 가운데 맞춤*/
+    padding:0 16px;     /*padding : 위아래:0 왼오른:16px*/                        
+                        /*4개가 주어지면 padding : 위 오른쪽 아래 왼쪽*/
+                        /*3개가 주어지면 padding : 위 양쪽 아래*/
+                        /*2개가 주어지면 padding : 위아래 양쪽*/
+                        /*1개가 주어지면 padding : 사방면*/
+    color:#fff;
+}
+.nav.container a{
+    color:#fff;
+}
+.nav-logo{
+    font-size: var(--h2-font-size);
+}
+.nav-list{
+    display: flex;  /*수평배치*/
+    column-gap:100px;   
+    font-weight: var(--font-bold);
+}
+.nav-toggle{
+    font-size: var(--h2-font-size);
+    visibility: hidden; /*아이콘 숨기기 반응형 할 때 유용*/
+    
+}
+/*tablet*/
+@media screen and (max-width:720px) {
+    
+}
+/* mobile */
+@media screen and (max-width:540px){
+    /*.nav-logo 가운데로*/
+    .nav-logo{
+        margin: 0 auto;
+    }
+    /*.nav-list 아래로, 안 보이게*/
+    /* .nav-toggle 보이게 */
+    .nav-list{
+        position: absolute;
+        top: 44px;
+        right: 0;/*오른쪽끝까지*/
+        left: 0; /*왼쪽끝까지*/
+        flex-direction: column; /*.nav-item 수직 배열*/
+        /* align-items: center; */
+        text-align: center; /*글자 가운데 정렬*/
+        background-color: rgba(239, 117, 28,0.4);
+        backdrop-filter: blur(4px);
+        height: 0;/*처음에 안보이게 */
+        transition: all 0.4s;
+        overflow: hidden; /*내용이 넘치면 안보이게*/
+    }
+    .nav-item{
+        padding: 1em 0; /*item 들의 위아래 여백*/
+        border-bottom: 2px solid#fff;
+    }
+    .nav-link{
+        display: block; /*링크를 양 옆으로 넓게 */
+        
+    }
+    .nav-toggle{
+        visibility: visible;
+        position: absolute; /*햄버거 메뉴 공간을 차지하지 않게 .nav-logo로고를 가운데로*/
+        right:16px;  /*햄버거 메유 원위치*/
+        cursor: pointer; /*손가락*/
+    }
+
+    /*.show-menu하면, .nav-list 보이게*/
+    /* .show-menu하면, .nav-toggle의 모양 X 자로 */
+    .show-menu{
+        height: 158px;
+    }
+}
