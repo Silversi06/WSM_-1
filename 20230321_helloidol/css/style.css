@@ -51,8 +51,8 @@ li:nth-child(5n){
     background-color: aqua;
 }
 ul:nth-child(3)>li:nth-child(2):hover{
-    text-decoration: overline;
+    text-decoration:overline;   /*레이*/
 }
 body>div:nth-child(8)>ul:nth-child(3)>li:nth-child(2){
-    font-size:8px;
+    font-size:8px;      /*레이*/
 }
