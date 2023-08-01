@@ -4,7 +4,7 @@
     gap:80px;   /*column-gap:80px; row-gap:80px;*/
     flex-wrap: wrap;    /*좁으면 내려가는 기능*/
     justify-content: center;    /*main축(수평) 가운데로*/
-    max-width: calc(150px * 4 + 80px * 3); /*한 줄에 최대 2개의 row-calender, 4개의 book-item* /
+    max-width: calc(150px * 4 + 80px * 3); /*한 줄에 최대 2개의 row-calender, 4개의 book-item*/
     margin-right: auto; /*좁아진 bookself 자체를 가운데로*/
     margin-left: auto;/*좁아진 bookself 자체를 가운데로*/
 }
@@ -15,13 +15,13 @@
     align-items: flex-end;  /*교차축 밑에 정렬하자*/
 }
 
-.book-item > img{
+.book-item img{
     width:150px;
     box-shadow: 0 16px 32px #dddddd;
     transition: all 0.2s;
 
 }
-.book-item >img:hover{
+.book-item img:hover{
     transform: translateY(-4px);
     box-shadow: 0 16px 48px #e1e1e1;
    
