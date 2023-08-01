@@ -27,7 +27,7 @@ nav_toggle.onclick = () => {
 //const navToggleDiv = document.getElementsByTagName("div")[0];
 
 // //4.CSS selecter 느리다
-// const navToggleDiv = document.querySelector("#nav-toggle");
+// const navToggleDiv = document.querySelector("#nav-toggle"); //CSS 선택자에 매치되는 하나 이상의 element 중 첫 번째 항목을 반환
 // const navToggleDiv = document.querySelectorAll(".nav-toggle")[0];
 // const navToggleDiv = document.querySelectorAll("div")[0];
 
