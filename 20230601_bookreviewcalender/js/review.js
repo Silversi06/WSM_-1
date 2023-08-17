@@ -3,6 +3,11 @@ let url_href=window.location.href;//브라우저 창에 있는 주소
 
 const bookId = new URL(url_href).searchParams.get("book");
 console.log(`bookId: ${bookId},type: ${typeof bookId}`);
+//bookId가  null이면 , index.html로 가자
+if(bookId == null){
+    window.open("index.html", target="_top"); //새로운 창 열려서 이동하는 문제 해결
+    //window.location.href="index.html";
+}
 
 // ->String 을 number 로 변환 
 let bookIdNumber =Number(bookId); //string-> number
@@ -42,7 +47,7 @@ const publisherDiv = document.getElementsByClassName("publisher")[1];
 publisherDiv.innerHTML = publisher;
 
 const imgDiv = document.getElementsByClassName("book-image")[0];
-imgDiv.innerHTML = `<img src = "${bookImage}" />`
+imgDiv.innerHTML = `<img src="${bookImage}"/>`;
 // const bookId = "1";
 // var url_href = window.location.href;
 
