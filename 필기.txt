@@ -1,0 +1,19 @@
+-container
+width:1000px;
+height:400px;
+display:grid;
+grid-template-rows:50% 50%;     200px 200px;    1fr 1fr;
+	repeat(2,50%);    repeat(2,500px); repeat(2,1fr);
+	repeat(2, 1fr 2fr);
+grid-template-columns:50% 50%    500px, 500px;     1fr 1fr;
+	repeat(2, 1fr);
+grid-template:grid-template-rows /grid-template-columns;
+
+
+-item
+grid-row-start:2;
+grid-row-end:3;
+grid-row:grid-row-start/grid-row-end;
+grid-column-start:1;
+grid-column-end:3;
+grid-column:grid-column-start/grid-column-end;
