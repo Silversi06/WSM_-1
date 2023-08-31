@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container *{
+    border:2px solid black;
+}
+
+figure > img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover; /*contain; 시험시험!!!!*/
+}
+html{
+    height: 100%;
+}
+.container{
+    width:100%;
+    height: 100%;
+    display:grid;
+    grid-template-columns: 200px 3fr 1fr;
+    grid-template-rows:44px 1fr 80px ;
+    grid-template-areas: 
+    "header header  header"
+    "side2  main    side_left"
+    "footer footer  footer";
+}
+.header{
+    background-color: palevioletred;
+    grid-area: header;
+}
+.side1{
+    background-color: orchid;
+    grid-area: side_left;
+}
+.main{
+    background-color: pink;
+    grid-area: main;
+}
+.side2{
+    background-color: plum;
+    grid-area: side2;
+}
+.footer{
+    background-color: indianred;
+    grid-area: footer;
+}   
